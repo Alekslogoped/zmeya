@@ -7,7 +7,7 @@
 <style>
 body{
   margin:0;
-  background:#e8f5e9;
+  background:#7bc96f;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -17,26 +17,25 @@ body{
 
 #wrap{
   position:relative;
+  padding:12px;
+  background:#5fae57;
+  border-radius:20px;
+  box-shadow:0 0 0 10px #4c8f48;
 }
 
 canvas{
-  background:#c8e6c9;
-  border:4px solid #2e7d32;
+  background:#7bc96f;
   border-radius:12px;
 }
 
 #ui{
   position:absolute;
-  top:-45px;
+  top:-40px;
   left:0;
   width:100%;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-}
-
-input{
-  width:120px;
+  color:white;
 }
 </style>
 </head>
@@ -47,12 +46,12 @@ input{
   <div id="ui">
     <div>Счёт: <span id="score">0</span></div>
     <div>
-      Скорость:
-      <input id="speed" type="range" min="4" max="15" value="8">
+      Скорость
+      <input id="speed" type="range" min="5" max="15" value="9">
     </div>
   </div>
 
-  <canvas id="game" width="420" height="420"></canvas>
+  <canvas id="game" width="480" height="360"></canvas>
 </div>
 
 <script>
@@ -61,7 +60,6 @@ const ctx = canvas.getContext("2d");
 
 const grid = 20;
 let frameCount = 0;
-let speed = 8;
+let speed = 9;
 
-document.getElementById("speed").oninput = e =>
-  speed = 20 - e.target.value;
+do
